@@ -1,10 +1,31 @@
+import PageIntro from '@/src/components/pageIntro';
+import GalleryGrid from '@/src/components/galleryGrid';
+
 export default function Gallery() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black">
-        <h1 className="text-3xl font-semibold">Gallery</h1>
-        <p className="text-zinc-600 dark:text-zinc-400">Gallery content coming soon</p>
-      </main>
-    </div>
+    <main className="flex flex-col min-h-screen">
+      <PageIntro
+        subtitle="Achcharu Perethayo"
+        title="Gallery"
+        description="Browse through our complete collection of works organized by category"
+      />
+      <GalleryGrid />
+      <section className="w-full bg-linear-to-r from-blue-50 to-purple-50 py-16 sm:py-24">
+        <div className="max-w-6xl mx-auto px-6 text-center space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            More Coming Soon
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We're constantly updating our gallery with new works. Check back soon for more!
+          </p>
+          <a
+            href="/"
+            className="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Back to Home
+          </a>
+        </div>
+      </section>
+    </main>
   );
 }
